@@ -8,7 +8,7 @@ https://docs.djangoproject.com/en/5.2/howto/deployment/wsgi/
 """
 
 import os
-import env  # Ensure SSL_CERT_FILE is set
+## import env  # Only needed for local development
 
 from django.core.wsgi import get_wsgi_application
 
