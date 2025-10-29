@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from PastLife import models
+from django.core.mail import send_mail
+from django.conf import settings
 
 # Create your views here.
 def home(request):
@@ -21,5 +23,21 @@ def contact(request):
             message=message
         )
         contact_message.save()
+
+        # Send email notification
+        send_mail(
+            f"We have received your message, {first_name} {last_name}!",
+            "We aim to respond within 24-48 hours.",
+            email,
+            [email],  # To customer email
+            fail_silently=False,
+        )
+        send_mail(
+            f"We have received a message from {first_name} {last_name}",
+            message,
+            email,
+            ['austindylan0@gmail.com'],  # To our email
+            fail_silently=False,
+        )
 
     return render(request, 'home.html')

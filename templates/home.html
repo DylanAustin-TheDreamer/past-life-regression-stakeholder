@@ -7,20 +7,43 @@
 <section>
     <div class="row" id="card">
         <div class="col-md-6 d-flex text-center" style="height: fit-content;">
-        <h2 id="tantric-title"><em>...The Tantric Way</em></h2>
+            <div id="card">
+        <h2 id="tantric-title"><em><img src="{% static 'images/lotus.png' %}" style="width: 32px; height: auto;"> Past Life Regression Therapy</em></h2>
+        <br>
+        <h3>With Alison Kershaw</h3>
+        <p>- Sentient Being</p>
+        <br>
+        <p><em>'With years of spiritual and inner work - I have developed a unique approach to healing and self-discovery.'</em></p>
+        <h3 class="mt-2" style="padding: 20px; background-color: azure;">Delivering in-depth 90 minute online sessions</h3>
+            </div>
         </div>
-        <div class="col-md-6 d-flex justify-content-center align-items-center flex-column">
-            <img src="{% static 'images/guru-rinpoche.jpg' %}" alt="Image of the magnificent Guru Rinpoche - Also known as, the lotus-born" class="mb-3 frame-image" >
-            <p class="text-center text-muted" style="word-wrap: break-word;">The magnificent Padmasambhava, also known as Guru Rinpoche, is a key figure in Tibetan Buddhism and is the emanation of Amitabha Buddha</p>
-            <p class="text-center text-muted" style="word-wrap: break-word;">Guru Rinpoche, the very one, who, emerged from a lotus flower on the lake of Dhanakosha, levitated effortlessly, flew a tiger over bhutan and wandered through the mountains of tibet. Subduing humans and demons - sealed oaths. Bless me that my wishes be spontaneously fulfilled. </p>
-            <p class="text-center text-muted" style="word-wrap: break-word;"><img src="{% static 'images/lotus.png' %}" style="width: 32px; height: auto;"><em> Om Mani Pemé Hung</em> - <em>Of the Vajrayana </em></p>
+        <div class="col-md-6 d-flex justify-content-center align-items-center flex-column fade-in-right mt-4">
+            <img src="{% static 'images/meditation.jpg' %}" alt="Image of the magnificent Guru Rinpoche - Also known as, the lotus-born" class="mb-3 frame-image" >
+            <p class="text-center text-muted" style="word-wrap: break-word;">Alignment with the higher self</p>
+            <p class="text-center text-muted" style="word-wrap: break-word;"><img src="{% static 'images/lotus.png' %}" style="width: 32px; height: auto;"><em> Return...</em></p>
         </div>
-    </div>
-    <div class="mt-4 container justify-content-center align-items-center text-center d-flex flex-column" style="padding: 20px; border-radius: 4px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-        <iframe max-width="560" max-height="315" src="https://www.youtube.com/embed/2aGn8EIDlYs?si=gQUJBL6wDrLGbqyx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 </section>
-<section>
+
+<div style="height: 100px;">
+</div>
+<article>
+    <div class="row">
+    <div class="col-md-6 d-flex justify-content-center align-items-center flex-column fade-in-left">
+        <img src="{% static 'images/ocean-meditator.jpg' %}" alt="Divider Image" class="divider-image my-4 container" id="div-img">
+    </div>
+    <div class="col-md-6 d-flex justify-content-center align-items-center flex-column fade-in-right">
+        <h2 class="text-center text-muted" style="word-wrap: break-word;">Obstacles come in many forms...</h2>
+        <h4 class="text-center text-muted" style="word-wrap: break-word;">They can be emotional, mental, or even physical.</h4>
+        <br>
+        <h6 class="text-center text-muted" style="word-wrap: break-word;"><img src="{% static 'images/lotus.png' %}" style="width: 32px; height: auto;"><em> But they come to teach...</em></h6>
+    </div>
+    </div>
+</article>
+<div style="height: 100px;">
+</div>
+
+<section class="fade-in-left">
     <div class="row mt-4" id="card">
         <div class="col-md-6 d-flex flex-column" style="height: fit-content;">
         <h3><img src="{% static 'images/lotus.png' %}" style="width: 32px; height: auto;"> Who am I...</h3>
@@ -29,15 +52,18 @@
         </p>
         <p class="text-muted">Qualifications:</p>
         <ul class="text-muted">
-            <li>Clairvision School Graduate</li>
             <li>Archetypal Meditation Practitioner</li>
             <li>Over 15 years of experience in transformative practices</li>
         </ul>
         <p>Currently offering personalized spiritual counseling sessions, including past-life regression therapy and archetypal meditation guidance. Please contact for more details.</p>
+        <ul class="text-muted">
+            <li>90 minutes - £200</li>
+            <li>Zoom meeting</li>
+        </ul>
         </div>
         <div class="col-md-6 d-flex justify-content-center align-items-center flex-column">
             <img src="{% static 'images/Alison-bird.jpg' %}" alt="Image of Alison Kershaw" class="mb-3" style="width: 350px; height: auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);" >
-            <p class="text-center text-muted" style="word-wrap: break-word;"><img src="{% static 'images/lotus.png' %}" style="width: 32px; height: auto;"><em> Om Mani Pemé Hung</em> - <em>Of the Vajrayana </em></p>
+            <p class="text-center text-muted" style="word-wrap: break-word;"><img src="{% static 'images/lotus.png' %}" style="width: 32px; height: auto;"><em> Om Mani Pemé Hung</em></p>
         </div>
     </div>
 </section>
@@ -57,4 +83,21 @@
         </form>
     </div>
 </section>
+
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in-right, .fade-in-left').forEach(div => {
+    observer.observe(div);
+  });
+});
+    </script>
 {% endblock %}
