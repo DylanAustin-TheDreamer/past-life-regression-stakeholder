@@ -5,7 +5,7 @@
 <div style="height: 10px;">
 </div>
 <section>
-    <div class="row" id="card">
+    <div class="row" id="card" style="overflow: hidden;">
         <div class="col-md-6 d-flex text-center" style="height: fit-content;">
             <div id="card">
         <h2 id="tantric-title"><em><img src="{% static 'images/lotus.png' %}" style="width: 32px; height: auto;"> Past Life Regression Therapy</em></h2>
@@ -27,7 +27,7 @@
 
 <div style="height: 100px;">
 </div>
-<article>
+<article style="overflow: hidden;">
     <div class="row">
     <div class="col-md-6 d-flex justify-content-center align-items-center flex-column fade-in-left">
         <img src="{% static 'images/ocean-meditator.jpg' %}" alt="Divider Image" class="divider-image my-4 container" id="div-img">
@@ -43,7 +43,7 @@
 <div style="height: 100px;">
 </div>
 
-<section class="fade-in-left">
+<section>
     <div class="row mt-4" id="card">
         <div class="col-md-6 d-flex flex-column" style="height: fit-content;">
         <h3><img src="{% static 'images/lotus.png' %}" style="width: 32px; height: auto;"> Who am I...</h3>
@@ -68,7 +68,8 @@
     </div>
 </section>
 <section>
-    <div class="mt-4 mb-4" id="card">
+    <div class="mt-4 mb-4 text-center" id="card">
+        <h3 style="background-color: rgba(29, 29, 29, 0.1); padding: 10px; font-weight: bold;">Get in Touch!</h3>
         <form action="{% url 'contact' %}" method="post" class="d-flex flex-column container-fluid" style="max-width: 700px;" id="contact-form">
             {% csrf_token %}
             <label class="form-control" for="first_name">First Name:</label>
@@ -83,6 +84,49 @@
         </form>
     </div>
 </section>
+
+<div id="what-is-it"></div>
+<article id="card">
+<h3 style="background: linear-gradient(90deg, rgba(0, 0, 0, 0.03) 0%, rgba(255, 255, 255, 0.1) 100%); padding: 20px;">What it is</h3>
+
+<p>Past-life regression is a technique (often in a hypnotherapy or deep-relaxation/meditative setting) in which a person is guided to “go back” and access memories or experiences of what are claimed to be previous lives or incarnations.
+It’s based on the idea of Reincarnation—that a person’s soul (or some essence) lives multiple lives—and that events, traumas, relationships or patterns from those lives may affect the current life.</p>
+
+<h3 style="background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0.1) 100%); padding: 20px;">How it works</h3>
+
+<p>A practitioner guides the client into a relaxed, hypnotic or trance-like state (using techniques like hypnosis, meditation, deep breathing).
+    The practitioner asks open-ended questions (for example: “What are you wearing? Where are you? What do you see/hear/feel?”) to facilitate the retrieval of “past-life” memories.
+    The purpose is often therapeutic: to uncover underlying causes of problems in the current life (fears, phobias, relationship issues, physical complaints with “no known origin”, feelings of being stuck) and work through them by integrating what’s discovered.</p>
+
+<p>Sessions vary in length, and what happens differs widely depending on the practitioner and the client’s openness.</p>
+
+<h3 style="background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0.1) 100%); padding: 20px;">Possible benefits & claims</h3>
+
+<p>Proponents say PLR can:</p>
+<ul>
+<li>Help people make sense of patterns in their current life (e.g., strong yet unexplained fears or attractions, recurring dreams, chronic issues) by linking them to past-life influences.</li>
+
+<li>Bring emotional healing: releasing burdens from “past-life” trauma, gaining closure, increasing a sense of self beyond the present life.</li>
+
+<li>Bring emotional healing: releasing burdens from “past-life” trauma, gaining closure, increasing a sense of self beyond the present life.</li>
+
+<li>Provide spiritual insight: a deeper sense of purpose, connection, meaning, sometimes an expanded view of life beyond just the current incarnation.</li>
+</ul>
+
+<h3 style="background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0.1) 100%); padding: 20px;">Criticisms</h3>
+<p>Criticisms & cautions:</p>
+<ul>
+<li>PLR is considered highly controversial in mainstream psychology/psychiatry. The primary reason: there is no scientific evidence that the “memories” retrieved are in fact real past-lives.</li>
+
+<li>Risks include creation of false memories: the hypnotic state and suggestive questioning may lead clients to confabulate or invent memories, even if experienced as real.</li>
+
+<li>Risks include creation of false memories: the hypnotic state and suggestive questioning may lead clients to confabulate or invent memories, even if experienced as real.</li>
+
+<li>Some ethicists argue that using PLR in therapy may violate principles of informed consent and non-maleficence (i.e., do no harm), because clients may believe they are accessing “past lives” when they are likely not.</li>
+
+<li>Even if not taken as “literal past lives,” some practitioners and critics see PLR as a kind of guided imagery or symbolic work—but that needs to be made clear to the client.</li>
+</ul>
+</article>
 
 <script>
    document.addEventListener('DOMContentLoaded', function() {
